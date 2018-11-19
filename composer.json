@@ -1,0 +1,7 @@
+{
+    "name": "denis909/yii2-theme-default",
+    "license": "MIT",
+    "require": {
+        "yiisoft/yii2": ">=2.0.4"
+    }
+}
