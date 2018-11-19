@@ -1,6 +1,11 @@
 {
     "name": "denis909/yii2-theme-default",
     "license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"denis909\\yii": [""]
+		}
+	},
     "require": {
         "yiisoft/yii2": ">=2.0.4"
     }
