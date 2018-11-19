@@ -12,17 +12,26 @@ abstract class LinkColumn extends DataColumn
 
 	public $url;
 
+	public $urlAttribute;
+
 	public $linkOptions = [];
 
     protected function renderDataCellContent($model, $key, $index)
     {
-    	if ($this->url instanceof Closure)
+    	if ($this->urlAttribute)
     	{
-    		$url = call_user_func($this->url, $model, $key, $index);
+    		$url = $model->{$this->urlAttribute};
     	}
     	else
     	{
-    		$url = $this->url;
+	    	if ($this->url instanceof Closure)
+	    	{
+	    		$url = call_user_func($this->url, $model, $key, $index);
+	    	}
+	    	else
+	    	{
+	    		$url = $this->url;
+	    	}
     	}
 
     	return Html::a($this->linkLabel, $url, $this->linkOptions);
