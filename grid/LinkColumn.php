@@ -8,7 +8,7 @@ use Closure;
 abstract class LinkColumn extends DataColumn
 {
 
-	public $label;
+	public $linkLabel;
 
 	public $url;
 
@@ -25,7 +25,7 @@ abstract class LinkColumn extends DataColumn
     		$url = $this->url;
     	}
 
-    	return Html::a($this->label, $url, $this->linkOptions);
+    	return Html::a($this->linkLabel, $url, $this->linkOptions);
     }
 
 }
