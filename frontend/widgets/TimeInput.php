@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii\widgets;
+namespace frontend\widgets;
 
 class TimeInput extends \theme\widgets\TimeInput
 {

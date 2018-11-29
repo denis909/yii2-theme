@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii\widgets;
+namespace backend\widgets;
 
 class EditorInput extends \theme\widgets\EditorInput
 {
