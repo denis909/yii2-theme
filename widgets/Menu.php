@@ -2,6 +2,10 @@
 
 namespace denis909\yii\widgets;
 
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
+use yii\helpers\Url;
+
 class Menu extends \yii\widgets\Menu
 {
 
