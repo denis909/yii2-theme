@@ -4,7 +4,7 @@ namespace denis909\yii\grid;
 
 use yii\helpers\Url;
 
-abstract class ActionColumn extends \yii\grid\ActionColumn
+class ActionColumn extends \yii\grid\ActionColumn
 {
 
 	public $contentOptions = ['style' => 'width: 1%; white-space: nowrap;'];

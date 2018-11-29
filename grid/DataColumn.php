@@ -2,7 +2,7 @@
 
 namespace denis909\yii\grid;
 
-abstract class DataColumn extends \yii\grid\DataColumn
+class DataColumn extends \yii\grid\DataColumn
 {
 
 	public $targetAttribute;

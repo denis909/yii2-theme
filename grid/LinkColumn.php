@@ -5,7 +5,7 @@ namespace denis909\yii\grid;
 use yii\helpers\Html;
 use Closure;
 
-abstract class LinkColumn extends DataColumn
+class LinkColumn extends DataColumn
 {
 
 	public $linkLabel;
