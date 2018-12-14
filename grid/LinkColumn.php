@@ -8,6 +8,14 @@ use Closure;
 class LinkColumn extends DataColumn
 {
 
+	public $contentOptions = [
+		'style' => 'width: 1%; white-space: nowrap;'
+	];
+
+	public $headerOptions = [
+		'style' => 'width: 1%;'
+	];
+
 	public $linkLabel;
 
 	public $url;
