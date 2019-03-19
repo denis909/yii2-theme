@@ -3,11 +3,6 @@
     "license": "MIT",
 	"autoload": {
 		"psr-4": {
-			"denis909\\yii\\": "",
-			"backend\\widgets\\": "backend/widgets/",
-			"backend\\grid\\": "backend/grid/",
-			"frontend\\widgets\\": "frontend/widgets/",
-			"frontend\\grid\\": "frontend/grid/"
 		}
 	},
     "require": {
