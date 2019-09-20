@@ -48,37 +48,37 @@ class Theme extends \yii\base\Component
 
     public function gridView(array $params = [])
     {
-        return $this->widget(const::GRID_VIEW, $params);
+        return $this->widget(static::GRID_VIEW, $params);
     }
 
     public function listView(array $params = [])
     {
-        return $this->widget(const::LIST_VIEW, $params);
+        return $this->widget(static::LIST_VIEW, $params);
     }    
 
     public function detailView(array $params = [])
     {
-        return $this->widget(const::DETAIL_VIEW, $params);
+        return $this->widget(static::DETAIL_VIEW, $params);
     }
 
     public function breadcrumbs(array $params = [])
     {
-        return $this->widget(const::BREADCRUMBS, $params);
+        return $this->widget(static::BREADCRUMBS, $params);
     }
 
     public function menu(array $params = [])
     {
-        return $this->widget(const::MENU, $params);
+        return $this->widget(static::MENU, $params);
     }
 
     public function actionMenu(array $params = [])
     {
-        return $this->widget(const::ACTION_MENU, $params);
+        return $this->widget(static::ACTION_MENU, $params);
     }
 
     public function mainMenu(array $params = [])
     {
-        return $this->widget(const::MAIN_MENU, $params);
+        return $this->widget(static::MAIN_MENU, $params);
     }
 
 }

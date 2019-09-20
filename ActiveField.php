@@ -2,6 +2,6 @@
 
 namespace denis909\theme;
 
-class ActiveField extends \theme\widgets\ActiveField
+class ActiveField extends \yii\widgets\ActiveField
 {
 }
