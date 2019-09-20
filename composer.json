@@ -7,6 +7,6 @@
 		}
 	},
 	"require": {
-        "denis909/yii2-menu"
+        "denis909/yii2-menu": "*"
 	}
 }
