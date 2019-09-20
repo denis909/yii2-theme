@@ -7,8 +7,6 @@ class Theme extends \yii\base\Component
 
     const ACTIVE_FORM = ActiveForm::class;
 
-    const ACTION_MENU = ActionMenu::class;
-
     const GRID_VIEW = GridView::class;
 
     const LIST_VIEW = ListView::class;
@@ -16,6 +14,10 @@ class Theme extends \yii\base\Component
     const DETAIL_VIEW = DetailView::class;
 
     const MENU = Menu::class;
+
+    const ACTION_MENU = ActionMenu::class;
+
+    const MAIN_MENU = MainMenu::class;
 
     const BREADCRUMBS = Breadcrumbs::class;
 
@@ -44,11 +46,6 @@ class Theme extends \yii\base\Component
         $this->endWidget(static::ACTIVE_FORM);
     }
 
-    public function menu(array $params = [])
-    {
-        return $this->widget(const::MENU, $params);
-    }
-
     public function gridView(array $params = [])
     {
         return $this->widget(const::GRID_VIEW, $params);
@@ -69,9 +66,19 @@ class Theme extends \yii\base\Component
         return $this->widget(const::BREADCRUMBS, $params);
     }
 
+    public function menu(array $params = [])
+    {
+        return $this->widget(const::MENU, $params);
+    }
+
     public function actionMenu(array $params = [])
     {
         return $this->widget(const::ACTION_MENU, $params);
+    }
+
+    public function mainMenu(array $params = [])
+    {
+        return $this->widget(const::MAIN_MENU, $params);
     }
 
 }
