@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii\grid;
+namespace denis909\theme;
 
 use yii\helpers\Url;
 

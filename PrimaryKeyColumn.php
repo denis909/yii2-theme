@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii\grid;
+namespace denis909\theme;
 
 class PrimaryKeyColumn extends DataColumn
 {
@@ -12,6 +12,5 @@ class PrimaryKeyColumn extends DataColumn
 	public $headerOptions = [
 		'style' => 'width: 1%;'
 	];
-
 
 }

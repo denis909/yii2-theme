@@ -3,11 +3,10 @@
     "license": "MIT",
 	"autoload": {
 		"psr-4": {
-            "denis909\\yii\\widgets\\" : "widgets/",
-            "denis909\\yii\\grid\\" : "grid/"
+            "denis909\\theme\\" : "",
 		}
 	},
-    "require": {
-        "yiisoft/yii2": ">=2.0.4"
-    }
+	"require": {
+        "denis909/yii2-menu"
+	}
 }
