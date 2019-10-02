@@ -2,6 +2,8 @@
 
 namespace denis909\theme;
 
+use yii\helpers\Html;
+
 class Theme extends \yii\base\Component
 {
 
@@ -79,6 +81,11 @@ class Theme extends \yii\base\Component
     public function mainMenu(array $params = [])
     {
         return $this->widget(static::MAIN_MENU, $params);
+    }
+
+    public function submitButton($name, array $options = [])
+    {
+        return Html::submitButton($name, $options);
     }
 
 }
