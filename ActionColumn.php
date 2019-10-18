@@ -9,29 +9,34 @@ class ActionColumn extends \yii\grid\ActionColumn
 
 	public $contentOptions = ['style' => 'width: 1%; white-space: nowrap;'];
 
-	public $baseUrl;
+    public $options = ['style' => 'width: 1%'];
 
+	public $baseUrl;
+    
     public function createUrl($action, $model, $key, $index)
     {
         if (is_callable($this->urlCreator)) 
         {
-            return parent::createUrl($action, $model, $key, $index);
-        } 
+            return call_user_func($this->urlCreator, $action, $model, $key, $index, $this);
+        }
 
         $params = is_array($key) ? $key : ['id' => (string) $key];
        
         if ($this->baseUrl)
         {
-        	$params[0] = $this->baseUrl . '/' . $action;
-    	}
-    	else
-    	{
-    		$params[0] = $this->controller ? $this->controller . '/' . $action : $action;	
-    	}
-
-        $params['returnUrl'] = Url::current();
+            $params[0] = $this->baseUrl . '/' . $action;
+        }
+        else
+        {
+            $params[0] = $this->controller ? $this->controller . '/' . $action : $action;   
+        }
         
-        return Url::toRoute($params);
+        if ($action != 'delete')
+        {
+            $params['returnUrl'] = Url::current();
+        }
+       
+        return Url::toRoute($params); 
     }
 
 }

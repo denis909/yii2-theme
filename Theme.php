@@ -23,6 +23,18 @@ class Theme extends \yii\base\Component
 
     const BREADCRUMBS = Breadcrumbs::class;
 
+    const ACTION_COLUMN = ActionColumn::class;
+
+    const LINK_COLUMN = LinkColumn::class;
+
+    const TIMESTAMP_COLUMN = TimestampColumn::class;
+
+    const DATA_COLUMN = DataColumn::class;
+
+    const SERIAL_COLUMN = SerialColumn::class;
+
+    const PRIMARY_COLUMN = PrimaryColumn::class;
+
     public function widget($class, array $params = [])
     {
         return $class::widget($params);

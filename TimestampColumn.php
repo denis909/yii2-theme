@@ -4,7 +4,7 @@ namespace denis909\yii\grid;
 
 use Yii;
 
-class DateColumn extends  \yii\grid\DataColumn
+class TimestampColumn extends  \yii\grid\DataColumn
 {
 
 	public $dateFormat = 'long';

@@ -2,7 +2,7 @@
 
 namespace denis909\theme;
 
-class PrimaryKeyColumn extends DataColumn
+class PrimaryColumn extends DataColumn
 {
 
 	public $contentOptions = [
