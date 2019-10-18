@@ -1,10 +1,10 @@
 <?php
 
-namespace denis909\yii\grid;
+namespace denis909\theme;
 
 use Yii;
 
-class TimestampColumn extends  \yii\grid\DataColumn
+class TimestampColumn extends DataColumn
 {
 
 	public $dateFormat = 'long';
