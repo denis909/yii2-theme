@@ -35,6 +35,8 @@ class Theme extends \yii\base\Component
 
     const PRIMARY_COLUMN = PrimaryColumn::class;
 
+    const RELATION_COLUMN = RelationColumn::class;
+
     public function widget($class, array $params = [])
     {
         return $class::widget($params);
