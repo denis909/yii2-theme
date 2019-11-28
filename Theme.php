@@ -8,13 +8,13 @@ use yii\helpers\ArrayHelper;
 class Theme extends \yii\base\Component
 {
 
+    const DETAIL_VIEW = DetailView::class;
+
     const ACTIVE_FORM = ActiveForm::class;
 
     const GRID_VIEW = GridView::class;
 
     const LIST_VIEW = ListView::class;
-
-    const DETAIL_VIEW = DetailView::class;
 
     const ACTION_MENU = ActionMenu::class;
 

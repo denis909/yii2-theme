@@ -2,8 +2,10 @@
 
 namespace denis909\theme;
 
-class GridView extends \yii\widgets\GridView
+class GridView extends \yii\grid\GridView
 {
+
+    public $theme;
 
     public $dataColumnClass = DataColumn::class;
 
