@@ -3,8 +3,9 @@
 namespace denis909\theme;
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 
-class Theme extends \yii\base\Component
+class Theme extends BaseTheme
 {
 
     const ACTIVE_FORM = ActiveForm::class;
@@ -35,20 +36,9 @@ class Theme extends \yii\base\Component
 
     const PRIMARY_COLUMN = PrimaryColumn::class;
 
-    public function widget($class, array $params = [])
-    {
-        return $class::widget($params);
-    }
+    const IMAGE_PREVIEW = ImagePreview::class;
 
-    public function beginWidget($class, array $params = [])
-    {
-        return $class::begin($params);
-    }
-
-    public function endWidget($class)
-    {
-        $class::end();
-    }
+    public $imagePreviewOptions = [];
 
     public function beginActiveForm(array $params = [])
     {
@@ -98,6 +88,15 @@ class Theme extends \yii\base\Component
     public function submitButton($name, array $options = [])
     {
         return Html::submitButton($name, $options);
+    }
+
+    public function imagePreview($url, array $options = [])
+    {
+        $options = ArrayHelper::merge($this->imagePreviewOptions, $options);
+
+        $options['url'] = $url;
+
+        return $this->widget(static::IMAGE_PREVIEW, $options);
     }
 
 }
