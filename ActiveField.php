@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\theme;
+namespace denis909\yii;
 
 class ActiveField extends \yii\widgets\ActiveField implements ActiveFieldInterface
 {
