@@ -4,6 +4,7 @@ namespace denis909\yii;
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use yii\widgets\Pjax;
 
 class Theme extends \yii\base\Component
 {
@@ -37,6 +38,8 @@ class Theme extends \yii\base\Component
 	const RELATION_COLUMN = RelationColumn::class;
 
 	const IMAGE_PREVIEW = ImagePreview::class;
+
+    const PJAX = Pjax::class;
     
     public $breadcrumbsOptions = [];
 
@@ -54,6 +57,12 @@ class Theme extends \yii\base\Component
 
     public $activeFormOptions = [];
 
+    public $pjaxOptions = [
+        'timeout' => 0,
+        'enablePushState' => false,
+        'enableReplaceState' => false
+    ];
+
     public function widget($class, array $params = [])
     {
         return $class::widget($params);
@@ -67,6 +76,18 @@ class Theme extends \yii\base\Component
     public function endWidget($class)
     {
         $class::end();
+    }
+
+    public function beginPjax(array $options = [])
+    {
+        $options = ArrayHelper::merge($this->pjaxOptions, $options);
+
+        return $this->beginWidget(static::PJAX, $options);
+    }
+
+    public function endPjax()
+    {
+        $this->endWidget(static::PJAX);
     }
 
     public function beginActiveForm(array $options = [])
