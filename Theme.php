@@ -35,6 +35,8 @@ class Theme extends \yii\base\Component
     const PRIMARY_COLUMN = PrimaryColumn::class;
 
 	const RELATION_COLUMN = RelationColumn::class;
+
+	const IMAGE_PREVIEW = ImagePreview::class;
     
     public $breadcrumbsOptions = [];
 
@@ -126,6 +128,15 @@ class Theme extends \yii\base\Component
         $options = ArrayHelper::merge($this->submitButtonOptions, $options);
 
         return Html::submitButton($name, $options);
+    }
+
+    public function imagePreview($url, array $options = [])
+    {
+        $options = ArrayHelper::merge($this->imagePreviewOptions, $options);
+
+        $options['url'] = $url;
+
+        return $this->widget(static::IMAGE_PREVIEW, $options);
     }
 
 }
