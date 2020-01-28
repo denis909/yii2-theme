@@ -57,6 +57,8 @@ class Theme extends \yii\base\Component
 
     public $activeFormOptions = [];
 
+    public $imagePreviewOptions = [];
+
     public $pjaxOptions = [
         'timeout' => 0,
         'enablePushState' => false,
