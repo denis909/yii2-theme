@@ -47,7 +47,9 @@ class Theme extends \yii\base\Component
 
     public $actionMenuOptions = [];
 
-    public $submitButtonOptions = [];
+    public $submitButtonOptions = ['class' => 'btn btn-primary'];
+
+    public $saveButtonOptions = ['class' => 'btn btn-success'];
 
     public $gridViewOptions = [];
 
@@ -150,8 +152,23 @@ class Theme extends \yii\base\Component
     {
         $options = ArrayHelper::merge($this->submitButtonOptions, $options);
 
+        $options['name'] = 'action';
+
+        $options['value'] = 'submit';
+
         return Html::submitButton($name, $options);
     }
+
+    public function saveButton($name, array $options = [])
+    {
+        $options = ArrayHelper::merge($this->saveButtonOptions, $options);
+
+        $options['name'] = 'action';
+
+        $options['value'] = 'save';
+
+        return Html::submitButton($name, $options);
+    }    
 
     public function imagePreview($url, array $options = [])
     {
