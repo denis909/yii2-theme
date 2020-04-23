@@ -49,7 +49,7 @@ class Theme extends \yii\base\Component
 
     public $submitButtonOptions = ['class' => 'btn btn-primary'];
 
-    public $saveButtonOptions = ['class' => 'btn btn-success'];
+    public $saveButtonOptions = ['class' => 'btn btn-light'];
 
     public $gridViewOptions = [];
 
