@@ -35,6 +35,8 @@ class Theme extends \yii\base\Component
 
     const PRIMARY_COLUMN = PrimaryColumn::class;
 
+    const PRIMARY_KEY_COLUMN = PrimaryKeyColumn::class;
+
 	const RELATION_COLUMN = RelationColumn::class;
 
 	const IMAGE_PREVIEW = ImagePreview::class;
