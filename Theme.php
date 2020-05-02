@@ -9,6 +9,8 @@ use yii\widgets\Pjax;
 class Theme extends \yii\base\Component
 {
 
+    const ASSETS = Assets::class;
+
     const DETAIL_VIEW = DetailView::class;
 
     const ACTIVE_FORM = ActiveForm::class;
@@ -157,6 +159,35 @@ class Theme extends \yii\base\Component
         $options['url'] = $url;
 
         return $this->widget(static::IMAGE_PREVIEW, $options);
+    }
+
+    public function submitButton($name, array $options = [])
+    {
+        $options = ArrayHelper::merge($this->submitButtonOptions, $options);
+
+        $options['name'] = 'action';
+
+        $options['value'] = 'submit';
+
+        return Html::submitButton($name, $options);
+    }
+
+    public function saveButton($name, array $options = [])
+    {
+        $options = ArrayHelper::merge($this->saveButtonOptions, $options);
+
+        $options['name'] = 'action';
+
+        $options['value'] = 'save';
+
+        return Html::submitButton($name, $options);
+    }
+
+    public function registerAssets(\yii\web\View $view)
+    {
+        $class = static::ASSETS;
+
+        $class::register($view);
     }
 
 }
