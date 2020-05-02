@@ -150,28 +150,6 @@ class Theme extends \yii\base\Component
         return $this->widget(static::MAIN_MENU, $options);
     }
 
-    public function submitButton($name, array $options = [])
-    {
-        $options = ArrayHelper::merge($this->submitButtonOptions, $options);
-
-        $options['name'] = 'action';
-
-        $options['value'] = 'submit';
-
-        return Html::submitButton($name, $options);
-    }
-
-    public function saveButton($name, array $options = [])
-    {
-        $options = ArrayHelper::merge($this->saveButtonOptions, $options);
-
-        $options['name'] = 'action';
-
-        $options['value'] = 'save';
-
-        return Html::submitButton($name, $options);
-    }    
-
     public function imagePreview($url, array $options = [])
     {
         $options = ArrayHelper::merge($this->imagePreviewOptions, $options);

@@ -2,10 +2,10 @@
 
 namespace denis909\yii;
 
-use yii\helpers\Html;
-
-class ActiveForm extends \yii\widgets\ActiveForm
+class ActiveForm extends \yii\widgets\ActiveForm implements ActiveFormInterface
 {
+
+    use ActiveFormTrait;
 
     public $fieldClass = ActiveField::class;
 
@@ -15,9 +15,8 @@ class ActiveForm extends \yii\widgets\ActiveForm
 
     public $enableAjaxValidation = false;
 
-    public function submitButton($name, array $options = [])
-    {
-        return Html::submitButton($name, $options);
-    }
-    
+    public $submitButtonOptions = ['class' => 'btn btn-primary'];
+
+    public $saveButtonOptions = ['class' => 'btn btn-light'];
+
 }
