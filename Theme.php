@@ -187,7 +187,7 @@ class Theme extends \yii\base\Component
     {
         $class = static::ASSETS;
 
-        $class::register($view);
+        return $class::register($view);
     }
 
 }

@@ -1,14 +1,14 @@
 {
     "name": "denis909/yii2-theme",
     "license": "MIT",
-	"autoload": {
-		"psr-4": {
+    "autoload": {
+        "psr-4": {
             "denis909\\yii\\" : ""
-		}
-	},
-	"require": {
+        }
+    },
+    "require": {
         "denis909/yii2-menu": "*",
         "denis909/yii2-boolean-column": "*",
         "denis909/yii2-action-column": "*"
-	}
+    }
 }
