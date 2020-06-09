@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii;
+namespace denis909\theme;
 
 use yii\helpers\Html;
 use Closure;
@@ -8,41 +8,41 @@ use Closure;
 class LinkColumn extends DataColumn
 {
 
-	public $contentOptions = [
-		'style' => 'width: 1%; white-space: nowrap;'
-	];
+    public $contentOptions = [
+        'style' => 'width: 1%; white-space: nowrap;'
+    ];
 
-	public $headerOptions = [
-		'style' => 'width: 1%;'
-	];
+    public $headerOptions = [
+        'style' => 'width: 1%;'
+    ];
 
-	public $linkLabel;
+    public $linkLabel;
 
-	public $url;
+    public $url;
 
-	public $urlAttribute;
+    public $urlAttribute;
 
-	public $linkOptions = [];
+    public $linkOptions = [];
 
     protected function renderDataCellContent($model, $key, $index)
     {
-    	if ($this->urlAttribute)
-    	{
-    		$url = $model->{$this->urlAttribute};
-    	}
-    	else
-    	{
-	    	if ($this->url instanceof Closure)
-	    	{
-	    		$url = call_user_func($this->url, $model, $key, $index);
-	    	}
-	    	else
-	    	{
-	    		$url = $this->url;
-	    	}
-    	}
+        if ($this->urlAttribute)
+        {
+            $url = $model->{$this->urlAttribute};
+        }
+        else
+        {
+            if ($this->url instanceof Closure)
+            {
+                $url = call_user_func($this->url, $model, $key, $index);
+            }
+            else
+            {
+                $url = $this->url;
+            }
+        }
 
-    	return Html::a($this->linkLabel, $url, $this->linkOptions);
+        return Html::a($this->linkLabel, $url, $this->linkOptions);
     }
 
 }

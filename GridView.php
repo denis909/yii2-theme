@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii;
+namespace denis909\theme;
 
 class GridView extends \yii\grid\GridView
 {

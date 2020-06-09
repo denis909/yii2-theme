@@ -1,12 +1,12 @@
 <?php
 
-namespace denis909\yii;
+namespace denis909\theme;
 
 class PrimaryColumn extends DataColumn
 {
 
-	public $contentOptions = [];
+    public $contentOptions = [];
 
-	public $headerOptions = [];
+    public $headerOptions = [];
 
 }

@@ -2,6 +2,6 @@
 
 namespace denis909\theme;
 
-interface ActiveFormInterface
+class Card extends \yii\base\Widget
 {
 }

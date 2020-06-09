@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii;
+namespace denis909\theme;
 
 class ActiveForm extends \yii\widgets\ActiveForm implements ActiveFormInterface
 {
