@@ -13,6 +13,8 @@ class Layout extends \yii\base\Widget
 
     public $assetsClass = Assets::class;
 
+    public $template = 'layout';
+
     public function init()
     {
         parent::init();
@@ -36,7 +38,7 @@ class Layout extends \yii\base\Widget
             $lang = substr(Yii::$app->language, 0, 2);
         }
 
-        return $this->render('layout', [
+        return $this->render($this->template, [
             'assetsClass' => $this->assetsClass,
             'content' => $content,
             'lang' => $lang
