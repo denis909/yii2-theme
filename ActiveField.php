@@ -7,4 +7,14 @@ class ActiveField extends \yii\widgets\ActiveField implements ActiveFieldInterfa
 
     use ActiveFieldTrait;
 
+    const DATE = DateInput::class;
+
+    const DATERANGE = DateRangeInput::class;
+
+    const DATETIME = DateTimeInput::class;
+
+    const TIME = TimeInput::class;
+
+    const SELECT2 = Select2Input::class;
+
 }

@@ -29,6 +29,4 @@ class MainLayout extends \yii\base\Widget
 
     public $cardTitle;
 
-
-
 }
