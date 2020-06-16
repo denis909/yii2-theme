@@ -17,6 +17,8 @@ class MainLayout extends \yii\base\Widget
 
     public $username;
 
+    public $avatarUrl;
+
     public $userMenu = [];
 
     public $accountMenu = [];
@@ -43,6 +45,8 @@ class MainLayout extends \yii\base\Widget
 
     public $assetsClass = Assets::class;
 
+    public $footerMenu = [];
+
     public function getParams()
     {
         return [
@@ -64,7 +68,8 @@ class MainLayout extends \yii\base\Widget
             'cardTitle' => $this->cardTitle,
             'layoutOptions' => $this->layoutOptions,
             'messageClass' => $this->messageClass,
-            'assetsClass' => $this->assetsClass
+            'assetsClass' => $this->assetsClass,
+            'avatarUrl' => $this->avatarUrl
         ];
     }
 
