@@ -2,6 +2,6 @@
 
 namespace denis909\theme;
 
-class LinkColumn extends denis909\yii\LinkColumn
+class LinkColumn extends \denis909\yii\LinkColumn
 {
 }
