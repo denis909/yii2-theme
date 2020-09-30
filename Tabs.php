@@ -2,9 +2,7 @@
 
 namespace denis909\theme;
 
-use Yii;
-
-class Select2 extends \kartik\select2\Select2
+class Tabs extends \kartik\tabs\TabsX
 {
 
     public $bsVersion = '4';
@@ -22,5 +20,5 @@ class Select2 extends \kartik\select2\Select2
 
         parent::init();
     }
-    
+
 }
