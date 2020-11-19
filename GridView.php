@@ -9,4 +9,6 @@ class GridView extends \yii\grid\GridView
 
     public $dataColumnClass = DataColumn::class;
 
+    public $pager = ['class' => LinkPager::class];
+
 }
