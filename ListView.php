@@ -5,13 +5,17 @@ namespace denis909\theme;
 class ListView extends \yii\widgets\ListView
 {
 
+    public $filter;
+
+    public $filterLayout = '{filter}';
+
     public $caption;
 
     public $captionLayout = '{caption}';
 
     public $pager = ['class' => LinkPager::class];
 
-    public $layout = "{caption}\n{summary}\n{items}\n{pager}";
+    public $layout = "{caption}\n{filter}\n{summary}\n{items}\n{pager}";
 
     public $itemsLayout = '{items}';
 
@@ -67,12 +71,25 @@ class ListView extends \yii\widgets\ListView
         return '';
     }
 
+    public function renderFilter()
+    {
+        if ($this->filter)
+        {
+            return strtr($this->filterLayout, ['{filter}' => $this->filter]);
+        }
+
+        return '';
+    }
+
     public function renderSection($name)
     {
         switch ($name) {
             case '{caption}':
                 return $this->renderCaption();
             break;
+            case '{filter}':
+                return $this->renderFilter();
+            break;            
         }
 
         return parent::renderSection($name);

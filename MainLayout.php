@@ -35,6 +35,8 @@ class MainLayout extends \yii\base\Widget
 
     public $mainMenu = [];
 
+    public $mainMenuClass = MainMenu::class;
+
     public $enableCard = true;
 
     public $cardTitle;
@@ -69,7 +71,8 @@ class MainLayout extends \yii\base\Widget
             'layoutOptions' => $this->layoutOptions,
             'messageClass' => $this->messageClass,
             'assetsClass' => $this->assetsClass,
-            'avatarUrl' => $this->avatarUrl
+            'avatarUrl' => $this->avatarUrl,
+            'mainMenuClass' => $this->mainMenuClass
         ];
     }
 
