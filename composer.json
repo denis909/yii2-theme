@@ -11,6 +11,7 @@
         "denis909/yii2-html": "*",
         "denis909/yii2-action-column": "*",
         "denis909/yii2-link-column": "*",
+        "denis909/yii2-list-view": "*",
         "kartik-v/yii2-widget-select2": "^2.1"
     }
 }
